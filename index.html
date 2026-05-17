@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polityka Prywatności – World Striker Heroes 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap');
+
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --s2: #1a1f2e;
+    --gold: #d4a843;
+    --gold2: #f0c75e;
+    --text: #e2e8f0;
+    --t2: #94a3b8;
+    --border: #1e293b;
+    --radius: 14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.7;
+  }
+
+  /* ── Animated gold top bar ── */
+  .top-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #8B6914, var(--gold), var(--gold2), var(--gold), #8B6914);
+    background-size: 300% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+  header {
+    background: rgba(10,14,23,0.97);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+  }
+
+  .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: var(--gold2);
+  }
+  .logo span { color: #fff; }
+
+  .subtitle {
+    font-size: 0.7rem;
+    color: var(--t2);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.2rem 4rem;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, rgba(212,168,67,0.12), rgba(240,199,94,0.05));
+    border: 1px solid rgba(212,168,67,0.25);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--gold2);
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    color: var(--t2);
+    font-size: 0.88rem;
+  }
+  .update-badge {
+    display: inline-block;
+    background: rgba(212,168,67,0.15);
+    border: 1px solid rgba(212,168,67,0.3);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-top: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    margin-bottom: 1.2rem;
+    transition: border-color 0.2s;
+  }
+  section:hover { border-color: rgba(212,168,67,0.2); }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .section-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(212,168,67,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold2);
+    letter-spacing: 0.3px;
+  }
+
+  p { font-size: 0.9rem; color: var(--t2); margin-bottom: 0.8rem; }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    margin: 0.6rem 0;
+  }
+  ul li {
+    font-size: 0.88rem;
+    color: var(--t2);
+    padding: 0.35rem 0 0.35rem 1.4rem;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  ul li:last-child { border-bottom: none; }
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  .highlight {
+    background: rgba(212,168,67,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1rem;
+    margin: 0.8rem 0;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+
+  .contact-box {
+    background: linear-gradient(135deg, rgba(212,168,67,0.1), rgba(240,199,94,0.04));
+    border: 1px solid rgba(212,168,67,0.3);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    text-align: center;
+  }
+  .contact-box h2 { margin-bottom: 0.5rem; }
+  .email-link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: var(--gold2);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .email-link:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--t2);
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+  footer strong { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header>
+  <div class="logo">WORLD STRIKER <span>HEROES</span></div>
+  <div class="subtitle"></div>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>🔒 Polityka Prywatności</h1>
+    <p>Niniejsza polityka wyjaśnia, jakie dane zbieramy,<br>jak je wykorzystujemy i jak je chronimy.</p>
+    <span class="update-badge">Ostatnia aktualizacja: Maj 2026</span>
+  </div>
+
+  <!-- 1. Wprowadzenie -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>1. Wprowadzenie i Dane Administratora</h2>
+    </div>
+    <p>Aplikacja <strong style="color:var(--gold2)">World Striker Heroes</strong> to gra typowania wyników piłkarskich Mistrzostw Świata FIFA 2026. Administratorem danych osobowych jest deweloper aplikacji.</p>
+    <p>Korzystając z aplikacji, akceptujesz zasady opisane w niniejszej Polityce Prywatności. Jeżeli nie zgadzasz się z tymi zasadami, nie korzystaj z aplikacji.</p>
+  </section>
+
+  <!-- 2. Jakie dane zbieramy -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🗄️</div>
+      <h2>2. Jakie Dane Zbieramy</h2>
+    </div>
+    <p>Zbieramy wyłącznie dane niezbędne do działania aplikacji:</p>
+    <ul>
+      <li><strong>Adres e-mail</strong> — do rejestracji i logowania konta</li>
+      <li><strong>Nickname (pseudonim)</strong> — wyświetlany w rankingach</li>
+      <li><strong>Kraj</strong> — wybierany dobrowolnie podczas rejestracji</li>
+      <li><strong>Dane logowania Google / Apple</strong> — jeśli wybierzesz logowanie przez te usługi</li>
+      <li><strong>Dane gry</strong> — typy wyników meczów, punkty, statystyki, przynależność do klubu</li>
+      <li><strong>Data i czas aktywności</strong> — do obliczania punktów i rankingów</li>
+    </ul>
+    <div class="highlight">
+      ℹ️ Tryb gościa: Gracze korzystający z trybu gościa nie podają adresu e-mail. Dane są przechowywane wyłącznie lokalnie na urządzeniu.
+    </div>
+  </section>
+
+  <!-- 3. Cel przetwarzania -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <h2>3. Cel Przetwarzania Danych</h2>
+    </div>
+    <p>Twoje dane są wykorzystywane wyłącznie do:</p>
+    <ul>
+      <li>Zarządzania kontem użytkownika i logowania</li>
+      <li>Wyświetlania wyników i rankingów w grze</li>
+      <li>Obliczania punktów i statystyk typowania</li>
+      <li>Funkcjonowania systemu klubów i grup znajomych</li>
+      <li>Wysyłania powiadomień o meczach (jeśli wyrazisz zgodę)</li>
+      <li>Poprawy stabilności i jakości aplikacji</li>
+    </ul>
+  </section>
+
+  <!-- 4. Firebase -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">☁️</div>
+      <h2>4. Usługi Zewnętrzne – Google Firebase</h2>
+    </div>
+    <p>Aplikacja korzysta z platformy <strong style="color:var(--gold2)">Google Firebase</strong> (Google LLC, USA) do przechowywania danych w chmurze:</p>
+    <ul>
+      <li><strong>Firebase Authentication</strong> — zarządzanie kontami i logowaniem</li>
+      <li><strong>Cloud Firestore</strong> — przechowywanie danych gry i rankingów</li>
+    </ul>
+    <p>Google Firebase przetwarza dane zgodnie ze swoją polityką prywatności dostępną na: <strong style="color:var(--gold)">firebase.google.com/support/privacy</strong></p>
+    <div class="highlight">
+      🔐 Dane mogą być przekazywane na serwery poza Europejskim Obszarem Gospodarczym (USA). Google Firebase spełnia wymagania RODO poprzez standardowe klauzule umowne.
+    </div>
+  </section>
+
+  <!-- 5. Dane logowania społecznościowego -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔑</div>
+      <h2>5. Logowanie Google i Apple</h2>
+    </div>
+    <p>Jeżeli logujesz się przez Google lub Apple, otrzymujemy wyłącznie podstawowe informacje profilowe (imię, adres e-mail, unikalny identyfikator) udostępnione przez te usługi. Nie przechowujemy Twojego hasła do tych serwisów.</p>
+    <p>Logowanie przez Google podlega polityce prywatności Google: <strong style="color:var(--gold)">policies.google.com/privacy</strong></p>
+    <p>Logowanie przez Apple podlega polityce prywatności Apple: <strong style="color:var(--gold)">apple.com/legal/privacy</strong></p>
+  </section>
+
+  <!-- 6. Prawa użytkownika -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <h2>6. Twoje Prawa (RODO)</h2>
+    </div>
+    <p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
+    <ul>
+      <li><strong>Prawo dostępu</strong> — możesz zażądać informacji o przetwarzanych danych</li>
+      <li><strong>Prawo do sprostowania</strong> — możesz poprawić błędne dane (np. nick w ustawieniach)</li>
+      <li><strong>Prawo do usunięcia</strong> — możesz zażądać usunięcia konta i danych</li>
+      <li><strong>Prawo do ograniczenia przetwarzania</strong> — możesz ograniczyć przetwarzanie danych</li>
+      <li><strong>Prawo do przenoszenia danych</strong> — możesz otrzymać swoje dane w formacie JSON</li>
+      <li><strong>Prawo do sprzeciwu</strong> — możesz sprzeciwić się przetwarzaniu danych</li>
+    </ul>
+    <div class="highlight">
+      Aby usunąć konto, przejdź do Ustawień w aplikacji i wybierz opcję usunięcia konta, lub skontaktuj się z nami mailowo.
+    </div>
+  </section>
+
+  <!-- 7. Przechowywanie danych -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">⏱️</div>
+      <h2>7. Okres Przechowywania Danych</h2>
+    </div>
+    <p>Dane konta są przechowywane przez cały czas aktywności konta. Po usunięciu konta, dane są permanentnie usuwane z bazy danych w ciągu <strong style="color:var(--gold2)">30 dni</strong>.</p>
+    <p>Dane lokalne (localStorage) na urządzeniu są usuwane po odinstalowaniu aplikacji lub ręcznym wyczyszczeniu pamięci podręcznej.</p>
+  </section>
+
+  <!-- 8. Bezpieczeństwo -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>8. Bezpieczeństwo Danych</h2>
+    </div>
+    <p>Stosujemy odpowiednie środki techniczne i organizacyjne chroniące Twoje dane:</p>
+    <ul>
+      <li>Hasła są szyfrowane przez Firebase Authentication (nigdy nie są przechowywane w jawnej formie)</li>
+      <li>Komunikacja z serwerem odbywa się przez szyfrowane połączenie HTTPS / TLS</li>
+      <li>Dostęp do bazy danych Firebase jest chroniony regułami bezpieczeństwa Firestore</li>
+      <li>Tylko autoryzowani administratorzy mają dostęp do danych</li>
+    </ul>
+  </section>
+
+  <!-- 9. Dzieci -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <h2>9. Ochrona Dzieci</h2>
+    </div>
+    <p>Aplikacja <strong style="color:var(--gold2)">World Striker Heroes</strong> nie jest przeznaczona dla dzieci poniżej 13. roku życia. Nie zbieramy świadomie danych osobowych od osób poniżej tego wieku. Jeśli dowiesz się, że dziecko poniżej 13 lat zarejestrowało konto, prosimy o kontakt — usuniemy dane niezwłocznie.</p>
+  </section>
+
+  <!-- 10. Zmiany polityki -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <h2>10. Zmiany Polityki Prywatności</h2>
+    </div>
+    <p>Możemy aktualizować niniejszą Politykę Prywatności. O istotnych zmianach poinformujemy Cię poprzez powiadomienie w aplikacji lub e-mail. Datę ostatniej aktualizacji znajdziesz zawsze na górze tej strony.</p>
+    <p>Dalsze korzystanie z aplikacji po wprowadzeniu zmian oznacza akceptację nowej polityki.</p>
+  </section>
+
+  <!-- Kontakt -->
+  <div class="contact-box">
+    <div class="section-icon" style="margin:0 auto 0.8rem;width:42px;height:42px;font-size:1.3rem;">✉️</div>
+    <h2>Kontakt w Sprawach Prywatności</h2>
+    <p style="color:var(--t2);font-size:0.85rem;margin-top:0.4rem;">Masz pytania dotyczące swoich danych? Napisz do nas:</p>
+    <a class="email-link" href="mailto:studioreymi@gmail.com">studioreymi@gmail.com</a>
+    <p style="color:var(--t2);font-size:0.75rem;margin-top:0.8rem;">Odpowiemy w ciągu 30 dni roboczych.</p>
+  </div>
+
+</div>
+
+<footer>
+  <strong>World Striker Heroes</strong> &copy; 2026 · FIFA World Cup 2026 Prediction Game<br>
+  <span style="margin-top:4px;display:block">Ta strona nie korzysta z plików cookie analitycznych.</span>
+</footer>
+
+</body>
+</html>
